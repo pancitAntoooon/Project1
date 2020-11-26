@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="branch.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Xing | Branches</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                <img src="images/brand.png" alt="">
+                <h3>Xing | Real Estate</h3>
+            </div>
+            <a href="Real Estate/realestate.html">&#9665; Back to Home</a>        
+        </header>
+
+        <section class="company">
+            <div class="co-banner">
+                <img src="images/brand.png">
+                <h3>About Us</h3>
+            </div>
+            <div class="co-content">
+                <div class="image">
+                    <img src="images/interview.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <h1>Job Opprtunities</h1>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="images/meeting.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <h1>How it started?</h1>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="images/career.jpg">
+                    <div class="overlay">
+                        <div class="text">
+                            <h1>Careers</h1>
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-office">
+            <div class="mo-banner">
+                <img src="images/brand.png">
+                <h3>Main Office</h3>
+            </div>
+            <div class="mo-content">
+                <div class="mo-text">
+                    <h3>Main Office</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <a href="#">Visit Us</a>
+                </div>
+                <div class="video">
+                   <video autoplay="true" muted="true" loop="true">
+                       <source src="images/officevid.mp4" type="video/mp4">
+                   </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="br-abroad">
+             <div class="br-banner">
+                <img src="images/brand.png">
+                <h3>Branches Overseas</h3>
+            </div>
+            <div class="br-content">
+                <div class="br-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/office1.jpg"></div>
+                        <div class="swiper-slide"><img src="images/office2.jpg"></div>
+                        <div class="swiper-slide"><img src="images/office3.jpg"></div>
+                        <div class="swiper-slide"><img src="images/office4.jpg"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <a href="#">View More</a>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                speed: 900,
+                simulateTouch: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+    </body>
+
+</html>
