@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Xing | Real Estate</title>
+        <link rel="stylesheet" type="text/css" href="realestate.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 700, function(){
+                window.location.hash = hash;
+              });
+            }
+          });
+        });
+        </script>
+    </head>
+
+    
+    <body>
+        
+        <header>
+            <div class="logo">
+                <img src="images/brand.png">
+            </div>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="menu">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#branch" onclick="toggleMenu()">Company</a></li>
+                <li><a href="#interior" onclick="toggleMenu()">Interior</a></li>
+                <li><a href="#property" onclick="toggleMenu()">Properties</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
+            </ul>
+        </header>
+
+        <section id="home">
+            <video src="images/int-video.mp4" autoplay="true" muted="true" loop="true"></video>
+            <div class="overlay"></div>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h1>We make the ordinary, <br><span>extraordinary</span></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a href="#">Inquire Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="branch">
+            <div class="br-banner">
+                <h1>Our Company</h1>
+            </div>
+            <div class="br-content">
+                <div class="br-image" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="images/city.jpg">
+                </div>
+                <div class="br-text" data-aos="zoom-in" data-aos-delay="300">
+                    <h1>Xing | Real Estate</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a href="RE Branches/branch.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="interior">
+            <div class="int-banner">
+                <h1>The Interior</h1>
+            </div>
+            <div class="int-content">
+                <div class="int-text" data-aos="zoom-in">
+                    <h1>Interior Design</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="int-image" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="images/interior.jpg">
+                </div>
+            </div>
+        </section>
+
+        <section id="property">
+            <div class="pro-banner">
+                <h1>Our Properties</h1>
+            </div>
+            <div class="pro-content" data-aos="fade-right">
+                <div class="pro-image">
+                    <img src="images/property.jpg">
+                </div>
+                <div class="pro-text" data-aos="fade-left" data-aos-delay="300">
+                    <h1>Properties Abroad</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                <h3>Contact Us :</h3>
+                <div class="cont-opt">
+                    <div class="loc">
+                        <img src="images/placeholder.png">
+                    </div>
+                    <div class="cont-text">
+                        <h4>Main Office Address :</h4>
+                        <p>#223 Aguilar St. Taguig City, Metro Manila Philippines +63</p>
+                    </div>
+                </div>
+                <div class="cont-opt">
+                    <div class="loc">
+                        <img src="images/envelope.png">
+                    </div>
+                    <div class="cont-text">
+                        <h4>Email :</h4>
+                        <p>xingrealestate@gmail.com</p>
+                    </div>
+                </div>
+                <div class="cont-opt">
+                    <div class="loc">
+                        <img src="images/call.png">
+                    </div>
+                    <div class="cont-text">
+                        <h4>Phone :</h4>
+                        <p>+63 906-229-1276</p>
+                        <p>+63 928-988-1020</p>
+                        <p>+63 915-223-6673</p>
+                    </div>
+                </div>
+            </div>
+
+            <form data-aos="zoom-in" data-aos-delay="600">
+                <h3>Message Form :</h3>
+                <input type="text" name="fname" placeholder="Fullname" required autocomplete="off">
+                <input type="text" name="email" placeholder="Email" required autocomplete="off">
+                <textarea placeholder="Message Here..."></textarea>
+                <input type="submit" name="" class="submit">
+            </form>
+        </section>
+        <script type="text/javascript">
+            window.addEventListener('scroll', function(){
+                let header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            window.addEventListener("load", function(){
+                let introText = document.querySelector('.intro-text');
+                introText.classList.toggle('intro-appear');
+            });
+
+            function toggleMenu() {
+                let menuToggle = document.querySelector('.toggle');
+                let menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        </script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+              easing: "ease-in-out-quart",
+            });
+        </script>
+    </body>
+
+</html>

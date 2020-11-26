@@ -1,0 +1,595 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    z-index: 10;  
+    transition: .5s ease;
+}
+
+header.sticky{
+    background: white;
+    height: 80px;
+    padding: 0px 100px;
+    box-shadow: 0px 5px 15px rgb(0,0,0,0.5);
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li{
+    display: inline-block;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+header ul li a:hover{
+    border-bottom: 2px solid white;
+
+}
+
+header.sticky ul li a{
+    color: rgb(24,118,156);
+}
+
+header.sticky ul li a:hover{
+    border-bottom: 2px solid rgb(24,118,156);
+}
+
+header .logo{
+    width: 70px;
+    height: 70px;
+}
+header.sticky .logo{
+    filter: invert(1);
+    width: 60px; 
+    height: 60px;
+}
+
+header .logo img{
+    width: 100%;
+    filter: invert(1);
+}
+
+#home{
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+#home video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.overlay{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(24,118,156));
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+.intro-content{
+    max-width: 100%;
+    padding: 0px 100px;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-text{
+    max-width: 60%;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: .5s all ease;
+}
+
+.intro-appear{
+    transform: translateY(-20px);
+    opacity: 1;
+}
+
+.intro-text h1{
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.intro-text h1 span{
+    font-size: 70px;
+    font-weight: 800;
+    transition: .5s ease;
+}
+
+.intro-text p{
+    color: white;
+    text-align: center;
+    font-weight: 400;
+}
+
+.intro-text a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin-top: 30px;
+    background: white;
+    padding: 10px 20px; 
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: .5s all ease-out;
+}
+
+#branch, #interior, #property{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#branch::after,
+#property::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(24,118,156);
+    clip-path: circle(350px at right 800px);
+}
+
+#interior{
+    background: rgb(24,118,156);
+}
+
+.br-banner, .int-banner, .pro-banner{
+    width: 20%;
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(24,118,156);
+}
+
+.int-banner{
+    border-bottom: 1px solid white;
+}
+
+.br-banner h1, .int-banner h1, .pro-banner h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(24,118,156);
+}
+
+.int-banner h1{
+    color: white;
+}
+
+.br-content, .int-content, .pro-content{
+    max-width: 100%;
+    padding: 0px 100px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.br-image, .pro-image{
+    width: 50%;
+    position: relative;
+}
+
+.int-image{
+    width: 45%;
+    position: relative;
+    z-index: 1;
+}
+
+.br-image::before,
+.pro-image::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: -15px;
+    background: gray;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.int-image::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    right: -15px;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.br-image img, .int-image img, .pro-image img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.br-text, .int-text, .pro-text{
+    width: 40%;
+}
+
+.br-text h1, .int-text h1, .pro-text h1{
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(24,118,156);
+} 
+
+.int-text h1, .int-text p{
+    color: white;
+    text-align: justify;
+}
+
+.br-text p, .pro-text p{
+    font-weight: 400;
+    text-align: justify;
+    color: rgb(24,118,156);
+}
+
+.br-text a, .int-text a, .pro-text a{
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: rgb(24,118,156);
+    border: 1px solid rgb(24,118,156);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: .5s ease;
+}
+
+.int-text a{
+    color: white;
+    border: 1px solid white;
+}
+
+.br-text a:hover,
+.pro-text a:hover{
+    color: white;
+    background: rgb(24,118,156);
+}
+
+.int-text a:hover{
+    color: rgb(24,118,156);
+    background: white;
+}
+
+#contact{
+    min-height: 90vh;
+    background: rgb(24,118,156);
+    padding: 35px 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact h3{    
+    color: white;
+    font-weight: 300;
+    font-size: 45px;
+}
+
+#contact .box{
+    max-width: 45%;
+}
+
+.cont-opt{
+    max-width: 70%;
+    max-height: 50%;
+    display: flex;
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+}
+
+.loc img{
+    width: 35px; 
+    height: 35px;
+    filter: invert(1);
+    margin-left: 10px;
+}
+
+.cont-text{
+    margin-left: 20px;
+    text-align: justify;
+    color: white;
+}
+
+form{
+    flex: 1;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#contact form h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: none;
+    padding: 0px 10px;
+    display: inline-block;
+}
+
+form textarea{
+    width: 100%;
+    height: 45%;
+    padding: 10px 10px;
+    outline: none;
+    resize: none;
+    border: none;
+}
+
+.submit{
+    width: 100px;
+    cursor: pointer;
+    color: rgb(24,118,156);
+    background: white;
+}
+
+/* Responsive*/
+
+@media (max-width: 1200px){
+    header{
+        padding: 50px 50px;
+    }
+
+    header.sticky{
+        padding: 0px 50px;
+    }
+
+    .intro-content{
+        margin-top: 100px;
+    }
+
+    .intro-text h1{
+        font-size: 35px;
+    }
+
+    .intro-text h1 span{
+        font-size: 50px;
+    }
+
+    .intro-text p{
+        font-size: 14px;
+    }
+
+    .intro-text a{
+        padding: 5px 15px;
+        font-size: 13px;
+    }
+
+    .br-text h1, .int-text h1, .pro-text h1{
+        font-size: 40px;
+    }
+
+    .br-image img{
+        width: 90%;
+    }
+
+    .br-text, .int-text{
+        width: 50%;
+    }
+
+    .br-image::before{
+        width: 90%;
+    }
+
+    #contact{
+        padding: 35px 80px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1024px){
+    header{
+        padding: 20px 50px 0px 50px;
+        z-index: 10;
+    }
+
+    header .logo{
+        width: 60px;
+        height: 60px;
+    }
+
+    header.sticky{
+        padding: 0px 50px;
+        z-index: 1000;
+    }
+
+    header ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        padding: 50px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        background: white;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        transition: .5s ease;
+        z-index: 9;
+    }
+
+    .menu.active{
+        left: 0;
+    }
+
+    header.sticky .toggle{
+        filter: invert(0);
+    }
+
+    header ul li{
+        display: block;
+        padding: 10px;
+    }
+
+    header ul li a{
+        color: black;
+        font-size: 30px;
+    }
+
+    header ul li a:hover{
+        border-bottom: 2px solid black;
+    }
+
+    .toggle{
+        width: 45px; 
+        height: 45px;
+        background: url(images/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        filter: invert(1);
+        cursor: pointer;
+    }
+
+    .toggle.active{
+        width: 35px; 
+        height: 35px;
+        background: url(images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        cursor: pointer;
+    }
+
+    .intro-text h1{
+        font-size: 30px;
+    }
+
+    .br-content, .int-content, .pro-content{
+        padding: 0px 40px;
+        justify-content: space-around;
+    }
+
+    #contact{
+        padding: 35px 40px;
+        justify-content: space-between;
+    }
+
+    .br-content{
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 768px){
+    header .logo{
+        width: 45px;
+        height: 45px;
+    }
+
+    header.sticky .logo{
+        width: 45px;
+        height: 45px;  
+    }
+
+    header .logo img{
+        width: 100%;
+    }
+
+    #branch::after,
+    #property::after{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(24,118,156);
+    clip-path: circle(350px at right 800px);
+    }
+
+    .intro-text{
+        max-width: 80%;
+    }
+
+    .intro-text h1{
+        font-size: 28px;
+    }
+
+    .br-banner, .int-banner{
+        width: 25%;
+    }
+
+    .pro-banner{
+        width: 30%
+    }
+
+    .br-text h1, .int-text h1, .pro-text h1{
+        font-size: 30px;
+    }
+
+    .br-text p, .int-text p, .pro-text p{
+        font-size: 12px;
+    }
+
+    .br-text a, .int-text a, .pro-text a{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+    #contact h3{
+        font-size: 30px;
+    }
+
+    .cont-opt{
+        max-width: 90%;
+    }
+
+    .cont-text h4{
+        font-size: 14px;
+    }
+
+    .cont-text p{
+        font-size: 12px;
+    }   
+
+    .loc img{
+        width: 25px;
+        height: 25px;
+    }
+
+    #contact form h3{
+        font-size: 15px;
+    }
+}
