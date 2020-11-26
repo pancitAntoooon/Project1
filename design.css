@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+    max-width: 100%;
+    height: 15vh;
+    padding: 15px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    transition: .5s all ease;
+}
+
+header a {
+    text-decoration: none;
+    color: #18779c;
+    padding: 5px;
+}
+
+.logo {
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.logo h3 {
+    color: #18779c;
+    font-size: 25px;
+}
+
+.intro-image{
+	height: 75vh;
+	max-width: 100%;
+	position: relative;
+
+}
+
+.intro-image img{
+	width: 100%;
+	height: 100%;
+
+}
+
+.img-descrp{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.img-descrp h1{
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 200;
+}
+
+.first-option,
+.second-option,
+.third-option{
+	max-width: 100%;
+	height: 85vh;
+	position: relative;
+	padding: 30px 70px;
+}
+
+.second-option{
+	background: rgb(24,118,156);
+	padding: 30px 70px;
+}
+
+.first-option::before,
+.second-option::before,
+.third-option::before{
+	content: "Minimalist";
+	position: absolute;
+	top: 30%;
+	right: 25%;
+	transform: translate(50%,-50%);
+	font-size: 100px;
+	text-transform: uppercase;
+	color: rgba(24,118,156,0.2);
+}
+
+.second-option::before{
+	content: "Contemporay";
+	left: 25%;
+	transform: translate(-45%, -50%);
+	color: rgba(225,225,225,0.2);
+}
+
+.third-option::before{
+	content: "Urban Modern";
+	font-size: 100px;
+	transform: translate(40%, -50%);
+}
+
+.opt-container{
+	max-width: 90%;
+	height: 85%;
+	margin: 40px auto 45px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.swiper-container {
+    width: 550px;
+    height: 380px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.swiper-slide h3{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%,-200%);
+	background: white;
+	padding: 5px 10px;
+	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active{
+    background: white;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    color: white;
+    outline: none;
+}
+
+.descrp{
+	width: 45%;
+	color: rgb(24,118,156);
+	text-align: justify;
+}
+.second-option .descrp{
+	color: white;
+}
+
+.descrp h1{
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 70px;
+}
+
+.descrp a{
+	display: inline-block;
+	margin-top: 20px;
+	text-decoration: none;
+	color: rgb(24,118,156);
+	border: 1px solid rgb(24,118,156);
+	padding: 10px 20px;
+	transition: .5s ease;
+}
+
+.second-option .descrp a{
+	color: white;
+	border: 1px solid white;
+}
+
+.descrp a:hover{
+	background: rgb(24,118,156);
+	color: white;
+}
+
+.second-option .descrp a:hover{
+	background: white;
+	color: rgb(24,118,156);
+}
+
+.footer{
+	height: 15vh;
+	max-width: 100%;
+	background: rgb(24,118,156);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer a{
+	color: white;
+	border: 1px solid white;
+	border-radius: 10px;
+	text-decoration: none;
+	padding: 10px 20px;
+	transition: .3s ease-in-out;
+}
+
+.footer a:hover{
+	color: rgb(24,118,156);
+	background: white;
+}
